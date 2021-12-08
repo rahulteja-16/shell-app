@@ -27,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
 		--fw-md: 500;
 		--fw-lg: 600;
 		--font: Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+		--hg-xs: 20px;
 		--hg-sm: 24px;
 		--hg-md: 32px;
 		--hg-lg: 40px;
