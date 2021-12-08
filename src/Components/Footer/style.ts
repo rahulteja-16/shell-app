@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 export const FooterWrapper = styled.footer`
-	height: var(--hg-sm);
-	color: var(--text-100);
+	height: var(--hg-xs);
 	display: flex;
 	padding: 8px;
 `
@@ -13,7 +12,7 @@ export const TextPosition = styled.div`
 `
 
 export const Text = styled.div`
-	font-size: var(--fs-md);
+	font-size: var(--fs-xs);
 	letter-spacing: 0.5px;
-	color: var(--blue-base);
+	color: var(--text-100);
 `
