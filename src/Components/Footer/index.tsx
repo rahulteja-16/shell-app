@@ -4,7 +4,7 @@ const Footer = () => {
 	return (
 		<FooterWrapper>
 			<TextPosition>
-				<Text>Designed & Built by Rahul Teja A</Text>
+				<Text>Designed & Built by Rahul Teja</Text>
 			</TextPosition>
 		</FooterWrapper>
 	)
