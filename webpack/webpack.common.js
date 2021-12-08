@@ -49,8 +49,17 @@ const getWPConfig = (env) => {
 			new ModuleFederationPlugin({
 				name: 'shell',
 				filename: 'shell.js',
-				remotes: {},
-				exposes: {},
+				remotes: {
+					shared:
+						env === 'dev'
+							? 'shared@http://localhost:3000/shared.js'
+							: 'shared@https://shared.rahulteja.dev/shared.js',
+				},
+				exposes: {
+					'./Wrapper': './src/Components/Wrapper',
+					'./useDeviceType': './src/Hooks/useDeviceType',
+					'./GlobalStyles': './src/Styles/GlobalStyles',
+				},
 				shared: {
 					react: {
 						singleton: true,

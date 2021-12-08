@@ -1,7 +1,7 @@
 {
-  "name": "react-ts-template",
+  "name": "shell-app",
   "version": "1.0.0",
-  "description": "Boiler Plate for React + TS + Webpack 5",
+  "description": "Shell Application with Header and Footer",
   "main": "index.js",
   "scripts": {
     "start": "webpack server --config webpack/webpack.config.js --env env=dev",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rahulteja-dev/react-ts-template.git"
+    "url": "git+https://github.com/rahulteja-dev/shell-app.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rahulteja-dev/react-ts-template/issues"
+    "url": "https://github.com/rahulteja-dev/shell-app/issues"
   },
-  "homepage": "https://github.com/rahulteja-dev/react-ts-template#readme",
+  "homepage": "https://github.com/rahulteja-dev/shell-app#readme",
   "dependencies": {
     "@types/styled-components": "^5.1.17",
     "babel-loader": "^8.2.2",
