@@ -5,6 +5,7 @@ export const HeaderWrapper = styled.header`
 	height: var(--hg-lg);
 	color: var(--text-100);
 	display: flex;
+	justify-content: space-between;
 	padding: 20px;
 	box-shadow: -8px -1px 15px -4px var(--text-200);
 `
@@ -36,8 +37,21 @@ export const Anchor = styled.a`
 export const SwitchDiv = styled.div`
 	display: flex;
 	justify-content: flex-end;
-	width: 75%;
+	height: 45px;
 	--btn-bg-color: var(--blue-base);
 	--btn-bg-hover-color: var(--blue-20);
 	--btn-text-color: var(--text-400);
+`
+
+export const IconWrapper = styled.div`
+	display: flex;
+	justify-content: space-around;
+	width: 16%;
+`
+export const GitHubWrapper = styled.div`
+	height: 30px;
+	width: 30px;
+	color: var(--blue-base);
+	margin-top: 8px;
+	cursor: pointer;
 `

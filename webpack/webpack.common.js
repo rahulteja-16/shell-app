@@ -32,7 +32,7 @@ const getWPConfig = (env) => {
 				},
 				{
 					test: /\.(woff(2)?|eot|ttf|otf|svg)$/,
-					type: 'asset/  inline',
+					type: 'asset/inline',
 				},
 			],
 		},

@@ -7,9 +7,15 @@ import { SectionWrapper } from './styles'
 
 interface WrapperProps {
 	children: ReactChild | ReactChildren
+	showGitHub: boolean
+	gitHubLink: string
 }
 
-const Wrapper = ({ children }: WrapperProps) => {
+const Wrapper = ({
+	children,
+	showGitHub = false,
+	gitHubLink = '',
+}: WrapperProps) => {
 	const device = useDeviceType()
 	useEffect(() => {
 		document.body.dataset.device = device
@@ -18,7 +24,7 @@ const Wrapper = ({ children }: WrapperProps) => {
 	return (
 		<>
 			<GlobalStyles />
-			<Header />
+			<Header showGitHub={showGitHub} githubLink={gitHubLink} />
 			<SectionWrapper>{children}</SectionWrapper>
 			<Footer />
 		</>
