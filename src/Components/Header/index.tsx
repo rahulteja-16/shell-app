@@ -1,56 +1,34 @@
-import { useState } from 'react'
 import {
-	GitHubWrapper,
-	HeaderLogo,
 	HeaderWrapper,
-	IconWrapper,
-	SwitchDiv,
+	Nav,
+	Anchor,
+	LogoWrapper,
+	ImageWrapper,
+	ActionsWrapper,
+	Label,
 } from './style'
-import DarkLogo from '../../Assets/name-dark.png'
-import LightLogo from '../../Assets/name-light.png'
-import ToggleTheme from '../ToggleTheme'
+import NameLogo from '../../Assets/name.png'
 // eslint-disable-next-line import/no-unresolved
-import Boop from 'shared/Boop'
-import GitHubIcon from '../../GitHubIcon'
+import Button from 'shared/Button'
 
-interface HeaderTypes {
-	showGitHub: boolean
-	githubLink: string
+interface HeaderProps {
+	label: string
 }
 
-const Header = ({ showGitHub = true, githubLink }: HeaderTypes) => {
-	const [currentTheme, setCurrentTheme] = useState('dark')
-
-	const themeValue = (theme: string) => {
-		setCurrentTheme(theme)
-	}
-
+const Header = ({ label }: HeaderProps) => {
 	return (
 		<HeaderWrapper>
-			<div>
-				{currentTheme === 'dark' ? (
-					<HeaderLogo src={LightLogo} alt="Logo Light" />
-				) : (
-					<HeaderLogo src={DarkLogo} alt="Logo Dark" />
-				)}
-			</div>
-			<IconWrapper>
-				{showGitHub && (
-					<Boop rotation={6} timing={50}>
-						<GitHubWrapper>
-							<a href={githubLink} target="_blank" rel="noreferrer">
-								<GitHubIcon />
-							</a>
-						</GitHubWrapper>
-					</Boop>
-				)}
-
-				<Boop rotation={6} timing={50}>
-					<SwitchDiv>
-						<ToggleTheme themeValue={themeValue} />
-					</SwitchDiv>
-				</Boop>
-			</IconWrapper>
+			<Nav>
+				<LogoWrapper>
+					<Anchor>
+						<ImageWrapper src={NameLogo} alt="Name Logo" />
+					</Anchor>
+					<Label>{label}</Label>
+				</LogoWrapper>
+				<ActionsWrapper>
+					<Button>Resume</Button>
+				</ActionsWrapper>
+			</Nav>
 		</HeaderWrapper>
 	)
 }
