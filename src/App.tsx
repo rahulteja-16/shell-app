@@ -4,9 +4,7 @@ import './styles.css'
 const App = () => {
 	return (
 		<>
-			<Wrapper>
-				<div>Working</div>
-			</Wrapper>
+			<Wrapper>Working </Wrapper>
 		</>
 	)
 }

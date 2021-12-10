@@ -1,10 +1,10 @@
-import { FooterWrapper, TextPosition, Text } from './style'
+import { FooterWrapper, TextPosition } from './style'
 
 const Footer = () => {
 	return (
 		<FooterWrapper>
 			<TextPosition>
-				<Text>Designed & Built by Rahul Teja</Text>
+				<div>Designed & Built by Rahul Teja</div>
 			</TextPosition>
 		</FooterWrapper>
 	)

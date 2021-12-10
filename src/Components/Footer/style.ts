@@ -1,18 +1,18 @@
 import styled from 'styled-components'
 
 export const FooterWrapper = styled.footer`
-	height: var(--hg-xs);
-	display: flex;
-	padding: 8px;
-`
-export const TextPosition = styled.div`
 	display: flex;
 	justify-content: center;
-	width: 100%;
+	align-items: center;
+	flex-direction: column;
+	height: auto;
+	min-height: 70px;
+	padding: 15px;
+	text-align: center;
 `
-
-export const Text = styled.div`
-	font-size: var(--fs-xs);
-	letter-spacing: 0.5px;
-	color: var(--text-100);
+export const TextPosition = styled.div`
+	color: var(--gray-300);
+	font-family: var(--font-mono);
+	font-size: var(--fz-xxs);
+	line-height: 1;
 `
