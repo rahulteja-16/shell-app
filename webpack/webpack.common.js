@@ -3,7 +3,6 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const ModuleFederationPlugin =
 	require('webpack').container.ModuleFederationPlugin
 const deps = require('../package.json').dependencies
-// const CopyPlugin = require('copy-webpack-plugin')
 
 const getWPConfig = (env) => {
 	return {
@@ -56,7 +55,7 @@ const getWPConfig = (env) => {
 							: 'shared@https://shared.rahulteja.dev/shared.js',
 				},
 				exposes: {
-					'./Wrapper': './src/Components/Wrapper',
+					'./Holder': './src/Exposed/Holder',
 					'./useDeviceType': './src/Hooks/useDeviceType',
 					'./GlobalStyles': './src/Styles/GlobalStyles',
 				},
@@ -75,9 +74,6 @@ const getWPConfig = (env) => {
 					},
 				},
 			}),
-			// new CopyPlugin({
-			// 	patterns: [{ from: '../src', to: '/build' }],
-			// }),
 		],
 		stats: 'errors-only',
 	}
